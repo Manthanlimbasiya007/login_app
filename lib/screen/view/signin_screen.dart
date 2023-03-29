@@ -63,6 +63,7 @@ class _signinscreenState extends State<signinscreen> {
                   Map m1 = await shr.readShr();
 
                   if (userEmail == m1['e1'] && userPassword == m1['p1']) {
+                    shr.createShr(txtemail.text, txtpassword.text, true);
                     Navigator.pushNamed(context, 'home');
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(

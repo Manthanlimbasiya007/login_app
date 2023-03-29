@@ -59,7 +59,7 @@ class _signupscreenState extends State<signupscreen> {
                   var email = txtemail.text;
                   var password = txtpassword.text;
                   Shr shr = Shr();
-                  shr.createShr(email,password);
+                  shr.createShr(email,password,false);
                   Navigator.pop(context);
                 },
                 child: Text("SignUp"),
